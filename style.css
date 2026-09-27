@@ -1,0 +1,1292 @@
+/* =========================
+   DEAR TOM — TOM'S ARCHIVE
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background:
+        linear-gradient(rgba(255, 245, 247, 0.92), rgba(255, 245, 247, 0.92)),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 28px,
+            rgba(180, 150, 170, 0.12) 29px
+        );
+
+    color: #493d47;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 240px;
+    height: 100vh;
+
+    padding: 35px 20px;
+
+    background: rgba(255, 232, 239, 0.97);
+
+    border-right: 2px dashed #cda8b8;
+
+    box-shadow: 4px 0 15px rgba(100, 70, 90, 0.10);
+
+    overflow-y: auto;
+
+    z-index: 100;
+}
+
+.sidebar h2 {
+    margin: 0;
+
+    border: none;
+
+    font-family: Georgia, serif;
+    font-size: 28px;
+
+    color: #6c4c5d;
+
+    text-align: center;
+}
+
+.sidebar-subtitle {
+    margin: 8px 0 30px;
+
+    text-align: center;
+
+    font-family: Georgia, serif;
+    font-size: 13px;
+
+    color: #987687;
+}
+
+
+/* =========================
+   SIDEBAR LINKS
+   ========================= */
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.sidebar nav a {
+    display: block;
+
+    padding: 10px 12px;
+
+    color: #604b59;
+    text-decoration: none;
+
+    font-size: 14px;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+.sidebar nav a:hover {
+    background: #f5cbd9;
+
+    transform: translateX(4px) rotate(-1deg);
+}
+
+
+/* =========================
+   SIDEBAR FOOTER
+   ========================= */
+
+.sidebar-footer {
+    margin-top: 35px;
+
+    text-align: center;
+
+    font-family: Georgia, serif;
+    font-size: 12px;
+
+    color: #b08396;
+}
+
+
+/* =========================
+   CONTENIDO
+   ========================= */
+
+body {
+    padding-left: 240px;
+}
+
+section {
+    width: min(1000px, 90%);
+
+    margin: 55px auto;
+
+    padding: 45px;
+
+    background: rgba(255, 250, 244, 0.96);
+
+    border: 2px solid #d8c3c9;
+
+    border-radius: 4px;
+
+    box-shadow:
+        7px 8px 0 #efd6df,
+        0 10px 25px rgba(80, 50, 70, 0.08);
+
+    scroll-margin-top: 30px;
+
+    position: relative;
+
+    transition: 0.2s;
+}
+
+section:hover {
+    transform: translateY(-2px) rotate(-0.1deg);
+
+    box-shadow:
+        9px 10px 0 #efd6df,
+        0 12px 28px rgba(80, 50, 70, 0.10);
+}
+
+section::before {
+    content: "";
+
+    position: absolute;
+
+    top: -12px;
+    left: 45px;
+
+    width: 90px;
+    height: 25px;
+
+    background: rgba(245, 203, 217, 0.75);
+
+    transform: rotate(-3deg);
+
+    box-shadow: 0 1px 3px rgba(80, 50, 70, 0.08);
+}
+/* =========================
+   HOME
+   ========================= */
+
+#home {
+    min-height: 620px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(255, 225, 235, 0.78),
+            rgba(255, 247, 239, 0.9)
+        );
+
+    border: 3px solid #d4aabb;
+}
+
+#home::before {
+    content: "✦  ♡  ✦  ☀  ✦  ♡  ✦";
+
+    color: #c994a8;
+
+    font-size: 22px;
+
+    margin-bottom: 25px;
+}
+
+#home h1 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(48px, 8vw, 82px);
+
+    color: #6c4c5d;
+
+    margin: 10px 0;
+}
+
+#home p {
+    font-size: 18px;
+
+    max-width: 500px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   TÍTULOS
+   ========================= */
+
+h2 {
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+
+    color: #705163;
+
+    border-bottom: 2px dashed #d5aebd;
+
+    padding-bottom: 12px;
+}
+
+p {
+    line-height: 1.8;
+}
+
+
+/* =========================
+   BOTONES
+   ========================= */
+
+button {
+    margin-top: 18px;
+
+    padding: 12px 24px;
+
+    border: 2px solid #9f7184;
+
+    border-radius: 10px;
+
+    background: #f3c8d7;
+
+    color: #543d49;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    box-shadow: 3px 3px 0 #c99aaa;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translate(2px, 2px);
+
+    box-shadow: 1px 1px 0 #c99aaa;
+}
+
+
+/* =========================
+   CARTA
+   ========================= */
+
+#letter {
+    background:
+        linear-gradient(
+            rgba(255, 251, 240, 0.95),
+            rgba(255, 248, 238, 0.95)
+        );
+}
+
+#letter p {
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   RECUERDOS
+   ========================= */
+
+#memories {
+    transform: rotate(0.2deg);
+}
+
+
+/* =========================
+   13 REGALOS
+   ========================= */
+
+#gifts ol {
+    padding-left: 25px;
+}
+
+#gifts li {
+    margin: 12px 0;
+
+    padding: 10px;
+
+    background: #fff0f4;
+
+    border-left: 4px solid #d9a5b7;
+
+    border-radius: 5px;
+}
+
+
+/* =========================
+   PEQUEÑAS COSAS
+   ========================= */
+
+#little-things {
+    background: #fff4f7;
+}
+
+
+/* =========================
+   FINAL
+   ========================= */
+
+#final {
+    min-height: 350px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe2eb,
+            #fff4e9
+        );
+}
+
+#final h2 {
+    font-size: 60px;
+
+    border: none;
+}
+
+#final p {
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   CELULAR
+   ========================= */
+
+@media (max-width: 650px) {
+
+    body {
+        padding-left: 0;
+    }
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+        height: auto;
+
+        border-right: none;
+        border-bottom: 2px dashed #cda8b8;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .sidebar nav a {
+        font-size: 12px;
+    }
+
+    section {
+        width: 92%;
+
+        padding: 25px;
+
+        margin: 30px auto;
+    }
+
+    #home {
+        min-height: 500px;
+    }
+
+    #home h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+}
+/* =========================
+   POLAROIDS — MEMORIES
+   ========================= */
+
+.polaroid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+
+    margin-top: 35px;
+}
+
+.polaroid {
+    width: 190px;
+
+    padding: 12px 12px 18px;
+
+    background: #fffdf8;
+
+    border: 1px solid #ddd4d7;
+
+    box-shadow:
+        4px 5px 0 #ead9df,
+        0 5px 12px rgba(80, 50, 70, 0.12);
+
+    text-align: center;
+
+    transform: rotate(-2deg);
+
+    transition: 0.25s;
+}
+
+.polaroid:nth-child(2) {
+    transform: rotate(2deg);
+}
+
+.polaroid:nth-child(3) {
+    transform: rotate(-1deg);
+}
+
+.polaroid:hover {
+    transform: translateY(-8px) rotate(0deg);
+
+    box-shadow:
+        5px 8px 0 #ead9df,
+        0 12px 20px rgba(80, 50, 70, 0.15);
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 155px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f5e9ed;
+
+    font-size: 35px;
+}
+
+.polaroid p {
+    margin: 12px 0 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 14px;
+
+    color: #705163;
+}
+/* =========================
+   SONG CARDS
+   ========================= */
+
+.song-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+.song-card {
+    padding: 25px;
+
+    background: #fff6f8;
+
+    border: 1px solid #d8c3c9;
+
+    box-shadow:
+        5px 5px 0 #efd6df,
+        0 6px 15px rgba(80, 50, 70, 0.08);
+
+    transform: rotate(0.5deg);
+
+    transition: 0.2s;
+}
+
+.song-card:nth-child(even) {
+    transform: rotate(-0.7deg);
+}
+
+.song-card:hover {
+    transform: translateY(-3px) rotate(0deg);
+}
+
+.song-number {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #b08396;
+}
+
+.song-card h3 {
+    margin: 10px 0 3px;
+
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    color: #705163;
+}
+
+.song-card .artist {
+    margin-top: 0;
+
+    font-size: 13px;
+
+    color: #987687;
+}
+
+.song-card > p:last-child {
+    margin-top: 15px;
+
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+}
+/* =========================
+   SUNSHINE — APOLLO FILE
+   ========================= */
+
+.sunshine-section {
+    background:
+        linear-gradient(
+            rgba(255, 249, 226, 0.96),
+            rgba(255, 250, 240, 0.96)
+        );
+
+    border-color: #dfc995;
+
+    box-shadow:
+        7px 8px 0 #eadfbd,
+        0 10px 25px rgba(100, 80, 40, 0.08);
+
+    text-align: center;
+}
+
+
+/* DIBUJITO DEL SOL */
+
+.sun-doodle {
+    font-family: Georgia, serif;
+
+    font-size: 72px;
+
+    color: #c9a94b;
+
+    line-height: 1;
+
+    margin: 5px 0 15px;
+
+    transition: 0.3s;
+}
+
+.sunshine-section:hover .sun-doodle {
+    transform: rotate(8deg) scale(1.05);
+}
+
+
+/* ETIQUETA */
+
+.sun-label {
+    margin: 0;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #a88b45;
+}
+
+
+/* TÍTULO */
+
+.sunshine-section h2 {
+    color: #806b35;
+
+    border-bottom-color: #d9c788;
+
+    margin-top: 10px;
+}
+
+
+/* FRASE PRINCIPAL */
+
+.sun-intro {
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+
+    font-style: italic;
+
+    color: #8b7340;
+
+    margin: 20px auto 35px;
+}
+
+
+/* FICHA DE APOLO */
+
+.apollo-card {
+    max-width: 600px;
+
+    margin: 0 auto 35px;
+
+    padding: 28px;
+
+    background: rgba(255, 253, 242, 0.9);
+
+    border: 1px solid #d8c99c;
+
+    box-shadow:
+        4px 5px 0 #eee4c5,
+        0 5px 15px rgba(90, 70, 30, 0.08);
+
+    transform: rotate(-0.5deg);
+}
+
+.apollo-stamp {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border: 1px dashed #c6ad65;
+
+    color: #9a803d;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+.apollo-card h3 {
+    margin: 18px 0 8px;
+
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    color: #806b35;
+}
+
+.apollo-symbols {
+    margin: 15px 0;
+
+    color: #c5a448;
+
+    font-size: 20px;
+}
+
+.apollo-card p {
+    margin-bottom: 0;
+
+    font-size: 13px;
+
+    color: #9a8754;
+}
+
+
+/* TEXTO PRINCIPAL */
+
+.sunshine-note {
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    background: #fffdf4;
+
+    border: 1px solid #ded3ae;
+
+    text-align: left;
+
+    box-shadow:
+        4px 5px 0 #eee5c9;
+
+    transform: rotate(0.4deg);
+}
+
+.sunshine-note p {
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #594f3b;
+}
+
+
+/* FINAL */
+
+.sun-footer {
+    margin-top: 35px;
+
+    font-family: Georgia, serif;
+
+    font-size: 14px;
+
+    color: #aa8d43;
+
+    letter-spacing: 1px;
+}
+/* =========================
+   ABOUT TOM — SUBJECT FILE
+   ========================= */
+
+.tom-section {
+    background:
+        linear-gradient(
+            rgba(255, 249, 252, 0.97),
+            rgba(255, 246, 239, 0.97)
+        );
+
+    border-color: #d5bdc8;
+
+    box-shadow:
+        7px 8px 0 #ead8df,
+        0 10px 25px rgba(80, 50, 70, 0.08);
+}
+
+
+/* ETIQUETA CONFIDENCIAL */
+
+.file-label {
+    margin: 0 0 8px;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #ad8295;
+}
+
+
+/* TÍTULO */
+
+.tom-title {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+
+    border-bottom: 2px dashed #d7b9c6;
+
+    padding-bottom: 12px;
+}
+
+.tom-title span {
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    color: #ad8295;
+}
+
+.tom-title h2 {
+    margin: 0;
+
+    border: none;
+
+    padding: 0;
+
+    font-size: 38px;
+
+    color: #684c5b;
+}
+
+
+/* INTRO */
+
+.tom-intro {
+    margin: 22px 0 30px;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    color: #806674;
+}
+
+
+/* ARCHIVO */
+
+.tom-file {
+    max-width: 800px;
+
+    margin: 0 auto 35px;
+
+    padding: 22px;
+
+    background: #fffdf8;
+
+    border: 1px solid #d9ced2;
+
+    box-shadow:
+        5px 6px 0 #eadde2,
+        0 7px 16px rgba(80, 50, 70, 0.08);
+
+    transform: rotate(-0.4deg);
+}
+
+
+/* CABECERA DEL ARCHIVO */
+
+.file-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px dashed #d7c1ca;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #a27c8d;
+}
+
+
+/* PERFIL */
+
+.tom-profile {
+    display: flex;
+
+    gap: 30px;
+
+    align-items: center;
+
+    margin-top: 25px;
+}
+
+
+/* ESPACIO PARA FOTO */
+
+.tom-photo {
+    flex-shrink: 0;
+
+    width: 170px;
+    height: 190px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #f7e9ee;
+
+    border: 1px solid #d8c1ca;
+
+    box-shadow:
+        3px 4px 0 #ead9df;
+
+    transform: rotate(-2deg);
+}
+
+.tom-photo span {
+    font-family: Georgia, serif;
+
+    font-size: 45px;
+
+    color: #c495a8;
+}
+
+.tom-photo small {
+    margin-top: 8px;
+
+    font-size: 10px;
+
+    color: #a27c8d;
+
+    letter-spacing: 1px;
+}
+
+
+/* INFORMACIÓN */
+
+.tom-info {
+    flex: 1;
+}
+
+.tom-info p {
+    margin: 12px 0;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px dotted #ddcbd2;
+
+    font-size: 14px;
+}
+
+.tom-info strong {
+    color: #8c6375;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* NOTITAS */
+
+.tom-notes {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 22px;
+
+    margin-top: 35px;
+}
+
+.tom-note {
+    width: 220px;
+
+    min-height: 130px;
+
+    padding: 20px;
+
+    background: #fff0c9;
+
+    box-shadow:
+        4px 5px 0 #eadfc5,
+        0 5px 12px rgba(80, 60, 30, 0.08);
+
+    transform: rotate(1.5deg);
+
+    transition: 0.2s;
+}
+
+.tom-note:nth-child(2) {
+    background: #fce3eb;
+
+    transform: rotate(-2deg);
+}
+
+.tom-note:nth-child(3) {
+    background: #eee5f5;
+
+    transform: rotate(1deg);
+}
+
+.tom-note:hover {
+    transform: translateY(-5px) rotate(0deg);
+}
+
+.tom-note span {
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    color: #96777f;
+}
+
+.tom-note p {
+    margin-top: 15px;
+
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* FINAL DEL ARCHIVO */
+
+.tom-classified {
+    margin: 35px 0 0;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #b08396;
+}
+
+
+/* =========================
+   ABOUT TOM — CELULAR
+   ========================= */
+
+@media (max-width: 650px) {
+
+    .tom-profile {
+        flex-direction: column;
+    }
+
+    .tom-photo {
+        width: 150px;
+        height: 170px;
+    }
+
+    .tom-title {
+        flex-wrap: wrap;
+    }
+
+}
+/* =========================
+   GIFTS — INTERACTIVE CARDS
+   ========================= */
+
+.gifts-section {
+    background:
+        linear-gradient(
+            rgba(255, 249, 252, 0.97),
+            rgba(255, 247, 239, 0.97)
+        );
+
+    border-color: #d8c2cc;
+
+    text-align: center;
+}
+
+.gifts-label {
+    margin: 0 0 8px;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #ad8295;
+}
+
+.gifts-section h2 {
+    margin-top: 5px;
+}
+
+.gifts-intro {
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    color: #806674;
+}
+
+
+/* CONTENEDOR */
+
+.gift-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 35px;
+
+    justify-items: center;
+
+    margin-top: 40px;
+}
+
+
+/* TARJETA */
+
+.gift-card {
+    width: 230px;
+    height: 300px;
+
+    position: relative;
+
+    cursor: pointer;
+
+    perspective: 1000px;
+}
+
+
+/* CARA DELANTERA Y TRASERA */
+
+.gift-front,
+.gift-back {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 25px;
+
+    border: 1px solid #d8c3c9;
+
+    box-shadow:
+        5px 6px 0 #ead8df,
+        0 8px 18px rgba(80, 50, 70, 0.10);
+
+    backface-visibility: hidden;
+
+    transition: transform 0.7s;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* FRENTE */
+
+.gift-front {
+    background: #fff4f7;
+
+    transform: rotateY(0deg);
+}
+
+.gift-number {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #ad8295;
+}
+
+.gift-icon {
+    margin: 25px 0 10px;
+
+    font-family: Georgia, serif;
+
+    font-size: 55px;
+
+    color: #c58fa5;
+}
+
+.gift-front h3 {
+    margin: 5px 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    color: #705163;
+}
+
+.gift-front p {
+    font-size: 12px;
+
+    color: #a27c8d;
+}
+
+
+/* PARTE DE ATRÁS */
+
+.gift-back {
+    background: #fffdf4;
+
+    transform: rotateY(180deg);
+
+    text-align: center;
+}
+
+.gift-back h3 {
+    margin: 20px 0 10px;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    color: #806b35;
+}
+
+.gift-back p {
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    color: #594f3b;
+}
+
+.gift-heart {
+    margin-top: 15px;
+
+    font-size: 25px;
+
+    color: #c58fa5;
+}
+
+
+/* CUANDO SE ABRE */
+
+.gift-card.opened .gift-front {
+    transform: rotateY(-180deg);
+}
+
+.gift-card.opened .gift-back {
+    transform: rotateY(0deg);
+}
+
+
+/* PIE */
+
+.gifts-footer {
+    margin-top: 35px;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #b08396;
+}
+.polaroid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.tom-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.polaroid:nth-child(1) {
+    transform: rotate(-3deg);
+}
+
+.polaroid:nth-child(2) {
+    transform: rotate(2deg);
+}
+
+.polaroid:nth-child(3) {
+    transform: rotate(-1deg);
+}
